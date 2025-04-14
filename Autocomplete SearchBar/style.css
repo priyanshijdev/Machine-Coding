@@ -9,12 +9,13 @@
 }
 
 .result-container {
-  width: 70%;
+  width: 400px;
   margin: auto;
   border: 3px solid black;
   padding: 6px;
   text-align: left;
-  height: 500px;
+  /* height: 500px; */
+  max-height: 200px;
   overflow-y: scroll;
 }
 .result {
