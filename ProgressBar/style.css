@@ -1,0 +1,18 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.outer {
+  margin: 10px 0;
+  border: 1px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.inner {
+  /* width: 80%; */
+  background-color: rgb(230, 152, 152);
+  padding: 1px;
+  text-align: right;
+  transition: 0.5 ease-in;
+}
