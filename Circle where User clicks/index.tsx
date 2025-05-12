@@ -7,6 +7,7 @@ export default function App() {
     setCircles([...circles, { x: e.clientX, y: e.clientY }]);
   };
 
+  // for redo and undo functionality
   return (
     <div className="App">
       <h1> Mouse clicking events::</h1>
