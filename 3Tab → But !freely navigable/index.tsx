@@ -9,8 +9,7 @@ export const App = () => {
   });
 
   const handleNext = () => {
-    // next tab handler :
-    // this is for handling navigation
+    // this is for handling navigation ---
     if (isActivetab === 1 && form.name.trim() !== "") {
       setTab(2);
     } else if (isActivetab === 2 && form.email.trim()! == "") {
@@ -26,8 +25,12 @@ export const App = () => {
     }
   };
 
+  const isStep1Valid = form.name.trim() !== "";
+  const isStep2Valid = form.email.trim() !== "";
+
   return (
     <>
+      <h1> Tab {isActivetab}</h1>
       {isActivetab === 1 && (
         <input
           type="text"
@@ -58,7 +61,21 @@ export const App = () => {
             Previous
           </button>
         </div>
-        <button style={{ marginLeft: "1rem" }}>Submit </button>
+        {isActivetab < 3 && (
+          <button
+            onClick={handleNext}
+            disabled={
+              (isActivetab === 1 && !isStep1Valid) ||
+              (isActivetab === 2 && !isStep2Valid)
+            }
+          >
+            Next{" "}
+          </button>
+        )}
+        <br />
+        <button onClick={handleSubmit} style={{ marginLeft: "1rem" }}>
+          Submit{" "}
+        </button>
       </div>
     </>
   );
