@@ -1,0 +1,5 @@
+How to approach?
+
+step-1 :build raw skeleton 
+step-2: then add features and functionality 
+step-3: form ? like -> always make one obj then initialise all those comp. one by one in it 
