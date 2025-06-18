@@ -1,6 +1,7 @@
 const Profile = ({ data, setData }) => {
   const { name, age, email } = data;
 
+  
   const handleChange = (e: any, item: any) => {
     const value = e.target.value;
     setData((prevData: any) => ({
@@ -9,6 +10,7 @@ const Profile = ({ data, setData }) => {
     }));
   };
 
+  
   return (
     <>
       <div>
