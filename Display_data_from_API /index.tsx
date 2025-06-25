@@ -1,3 +1,5 @@
+// Show how to fetch and display data from an API using useEffect.
+
 import React, { useEffect, useState } from "react";
 
 interface User {
