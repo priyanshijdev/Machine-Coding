@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
+// asked in Snapmint interview
+
 export const App = () => {
+  
   const [isActivetab, setTab] = useState(1);
   const [form, setForm] = useState({
     name: "",
