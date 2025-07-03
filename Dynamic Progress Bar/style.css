@@ -1,0 +1,30 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.progress {
+  /* background-color: rgba(187, 178, 177, 0.934); */
+  height: 25px;
+  width: 80%;
+  border-radius: 25px;
+  /* gap: 18px; */
+  border: 1px solid black;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.progress span {
+  position: absolute;
+  width: 100%;
+  line-height: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  z-index: 2;
+  background-color: transparent; /* So it doesn't cover the bar */
+}
+
+.progressNumber {
+  background-color: rgb(86, 235, 86);
+  height: 100%; /* Match parent container height (25px) */
+}
