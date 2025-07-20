@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { ProfileTab } from "./ApiTask";
+import { Interest } from "./Interest";
+import { Setting } from "./Setting";
+import "./styles.css";
 
-import Interest from "./Interest";
-import Profile from "./Profile";
-import Setting from "./Setting";
-
-export const Main = () => {
+export default function App() {
   const [activeTab, setActiveTab] = useState(0);
   const [data, setData] = useState({
     name: "Priya",
@@ -12,10 +12,11 @@ export const Main = () => {
     email: "priya@gmail.com",
     hobbies: ["yoga", "movies"],
   });
+
   const tabs = [
     {
       name: "Profile",
-      component: Profile,
+      component: ProfileTab,
     },
     {
       name: "Interest",
@@ -26,25 +27,25 @@ export const Main = () => {
       component: Setting,
     },
   ];
-  const ActiveTabComp = tabs[activeTab].component;
+
+  const ActiveComponent = tabs[activeTab].component;
 
   return (
-    <div>
-      <div className="headingContainer">
-        {tabs.map((t: any, index) => (
+    <div className="App">
+      <div style={{ gap: "20px", display: "flex" }}>
+        {tabs.map((ele, index) => (
           <div
             key={index}
+            style={{ border: "1px solid black", cursor: "pointer" }}
             onClick={() => setActiveTab(index)}
-            className="heading"
           >
-            {t.name}{" "}
+            {ele.name}
           </div>
         ))}
       </div>
-      <br />
-      <div className="component-body">
-        <ActiveTabComp data={data} setData={setData} />
+      <div>
+        <ActiveComponent />
       </div>
     </div>
   );
-};
+}
