@@ -1,0 +1,48 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+* {
+  box-sizing: border-box;
+}
+
+header,
+nav,
+aside,
+main,
+footer {
+  padding: 19px;
+  text-align: center;
+}
+.content {
+  display: flex;
+  flex-grow: 1;
+}
+header {
+  background-color: aqua;
+}
+nav {
+  background-color: coral;
+  flex-shrink: 0;
+  width: 100px;
+}
+main {
+  background-color: brown;
+  flex-grow: 1;
+}
+
+aside {
+  background-color: coral;
+  flex-shrink: 0;
+  width: 100px;
+}
+footer {
+  background-color: slategray;
+  height: 100px;
+}
