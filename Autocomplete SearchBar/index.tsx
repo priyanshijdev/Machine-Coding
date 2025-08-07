@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./styles.css";
 
-// auto complete search bar ---
+// auto complete search bar --- Akshay Saini's Approach
 // ask where will we get data dump?
 // also onblur and onfocus features
 export default function App() {
