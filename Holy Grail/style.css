@@ -1,48 +1,39 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
 }
 
 header,
-nav,
-aside,
-main,
 footer {
-  padding: 19px;
-  text-align: center;
-}
-.content {
-  display: flex;
-  flex-grow: 1;
-}
-header {
-  background-color: aqua;
-}
-nav {
-  background-color: coral;
-  flex-shrink: 0;
-  width: 100px;
-}
-main {
-  background-color: brown;
-  flex-grow: 1;
+  background-color: #a0d8ef;
+  padding: 20px;
 }
 
+.mainContent {
+  display: flex;
+  flex: 1;
+}
+
+nav {
+  background-color: coral;
+  padding: 20px;
+  flex-shrink: 0;
+}
+main {
+  background-color: pink;
+  padding: 20px;
+  flex-grow: 1;
+}
 aside {
   background-color: coral;
+  padding: 20px;
   flex-shrink: 0;
-  width: 100px;
-}
-footer {
-  background-color: slategray;
-  height: 100px;
 }
