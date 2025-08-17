@@ -1,39 +1,42 @@
-task:
-🔹 Auto-starts from 0 on page load
-⏹ Has a Stop button to pause the counter
-▶️ Has a Start button to resume it
-🔁 A Reset button to bring it back to 0
+import "./styles.css";
+import { useState, useEffect } from "react";
 
-import React, { useEffect, useState } from "react";
-
+// 🔹 Auto-starts from 0 on page load
+// ⏹ Has a Stop button to pause the counter
+// ▶️ Has a Start button to resume it
+// 🔁 A Reset button to bring it back to 0
 export default function App() {
   const [count, setCount] = useState(0);
-  const [running, setRunning] = useState(true);
+  const [start, setStart] = useState(true);
 
   useEffect(() => {
-    let timer;
-    if (running) {
-      timer = setInterval(() => setCount((c) => c + 1), 1000);
+    let interval;
+
+    if (start) {
+      interval = setInterval(() => {
+        setCount((c) => c + 1);
+      }, 1000);
     }
-    return () => clearInterval(timer);
-  }, [running]);
-  const handleReset = () => {
-    setCount(0);
-    setRunning(false);
-  };
+
+    // cleanup when stopped OR component unmounts
+    return () => clearInterval(interval);
+  }, [start]);
 
   return (
-    <>
-      <h1>Counter: {count}</h1>
-      <div>
-        <button onClick={() => setRunning(true)} disabled={running}>
-          ▶️ Start
-        </button>
-        <button onClick={() => setRunning(false)} disabled={!running}>
-          ▶️ Stop
-        </button>
-        <button onClick={handleReset}>Reset</button>
-      </div>
-    </>
+    <div className="App">
+      <h1> Counter </h1>
+      <button onClick={() => setStart(true)}>start</button>{" "}
+      <button onClick={() => setStart(false)}>Stop</button> <br />
+      {count}
+      <br />
+      <button
+        onClick={() => {
+          setCount(0);
+          setStart(false); // also stop on reset
+        }}
+      >
+        Reset
+      </button>
+    </div>
   );
 }
