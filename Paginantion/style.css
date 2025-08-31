@@ -4,6 +4,7 @@
 }
 
 .products {
+  
   margin: 20px;
   padding: 0;
   display: grid;
@@ -19,6 +20,7 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
 .products__single img {
   width: 80%;
   height: 55%;
