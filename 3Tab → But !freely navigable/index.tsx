@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// asked in Snapmint interview
+// asked in Snapmint interview also known as Tabs Component
 
 export const App = () => {
   
