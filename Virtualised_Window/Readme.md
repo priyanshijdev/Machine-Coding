@@ -5,3 +5,5 @@ using react-virtuoso package
 
 
 npm install react-virtuoso
+
+With the help of this library "Virtuoso"I implemented virtualisation window. 
