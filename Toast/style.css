@@ -1,0 +1,30 @@
+.toastContainer {
+  position: fixed;
+  top:1rem;
+  right:2rem;
+}
+
+.toast {
+  background-color :green;
+  width: 12rem;
+  padding:10px;
+  border-radius:3px;
+  color:white;
+  animation: slide 1s 1 ;
+  span {
+    position: absolute;
+    right:0.3rem;
+    top:0rem;
+    cursor: pointer;
+  }
+}
+
+
+@keyframes slide {
+  0%{
+transform : translateX(100%);
+  },
+  100%{
+    transform : translateX(0%);
+  }
+}
