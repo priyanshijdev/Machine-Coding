@@ -1,17 +1,27 @@
 // import "./styles.css";
+import { useState } from "react";
 
 function ToastContainer() {
+  const [show, setShow] = useState(false);
+  
+  function handleShow() {
+    setShow(true);
+    setTimeout(() => {
+      setShow(false);
+    }, 4000);
+  }
   return (
     <div className="container">
-
-      <div className="toastContainer">
-        <div className='toast'>
-        Success <span> x</span>
-      </div>
-      </div>
+      {show && (
+        <div className="toastContainer">
+          <div className="toast">
+            Success <span onClick={()=> setShow(false)}> x</span>
+          </div>
+        </div>
+      )}
 
       <div className="btn-container">
-        <button> Sucess</button>
+        <button onClick={handleShow}> Sucess</button>
         <button> Warning</button>
         <button> Error</button>
         <button>Info </button>
