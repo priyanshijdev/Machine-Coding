@@ -1,0 +1,29 @@
+
+.shipment-table th,
+.shipment-table td {
+  border: 2px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+.search-ship {
+  width: 40%;
+  padding: 4px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination button:hover {
